@@ -44,4 +44,4 @@ jobs:
     steps:
       - run:
           name: deploy-application
-          command: ssh -p 5454 -o StrictHostKeyChecking=no ec2-13-49-231-69.eu-north-1.compute.amazonaws.com "export CONTAINER_NAME=\"$CONTAINER_NAME\"; export IMAGE_NAME=\"$IMAGE_NAME\"; rm -rf ArticleList/; git clone https://github.com/DMLFrancis/ArticleList; source ArticleList/deploy.sh"
+          command: ssh -p 5454 -o StrictHostKeyChecking=no ec2-13-49-231-69.eu-north-1.compute.amazonaws.com "export SERVER=\"${SERVER}\"; export CONTAINER_NAME=\"$CONTAINER_NAME\"; export IMAGE_NAME=\"$IMAGE_NAME\"; export PRIVATE_KEY=\"${PRIVATE_KEY}\"; rm -rf ArticleList/; git clone https://github.com/DMLFrancis/ArticleList; source ArticleList/deploy.sh"
