@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+test_article_published_task:
+  title: Test Article 1
+  body: This is Test Article 1.
+  published: true
+
+test_article_not_published_task:
+  title: Test Article 2
+  body: This is Test Article 2.
+  published: false
+
+#functional_test for articles_controller_test.rb
+functional_test:
+  title: Functional Test
+  body: This is a functional test to ensure that the controllers are working properly
+  published: true

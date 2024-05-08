@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Ruby on Rails Application</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(to right, #d9eeff, #f1f8ff, #f6faff, #f6faff, #f1f8ff, #d9eeff) !important;
+    }
+    .banner {
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      width: 100%;
+    }
+    .container {
+      position: relative;
+    }
+    .footer {
+      background-color: #f0efef;
+      padding: 10px 0;
+      text-align: center;
+    }
+    .footerLinkedInIcon {
+      width: 30px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner" style="background-image: url('/assets/image 7.webp');"></div>
+
+  <div class="container">
+    <br />
+    <h1>Ruby on Rails Application</h1>
+    <h2>Articles</h2>
+    <br />
+    <div class="content">
+      <% @articles.each do |article| %>
+        <%= render article %>
+        <p>
+          <%= link_to "Show this article", article, class: "btn btn-primary" %>
+        </p>
+        <br />
+      <% end %>
+      <%= link_to "New article", new_article_path, class: "btn btn-success" %>
+      <br />
+    </div>
+  </div>
+  <br />
+  <br />
+  <div class="footer">
+    <h5>Dean Francis</h5>
+    <p class="footerText">Student number - 22212761</p>
+    <a href="https://www.linkedin.com/in/deanfrancis/">
+      <img class="footerLinkedInIcon" src="/assets/LinkedIn_logo_initials.png" alt="LinkedIn" />
+    </a>
+  </div>
+
+</body>
+</html>
